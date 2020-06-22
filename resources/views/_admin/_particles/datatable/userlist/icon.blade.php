@@ -1,0 +1,1 @@
+<img src=" {{ makepreview($user->icon, 's', 'members/avatar') }}" width="55" height="55">

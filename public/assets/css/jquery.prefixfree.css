@@ -1,0 +1,73 @@
+section.tab_content {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+input.tab_button {
+  display: none;
+}
+
+label.tab_ {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+label.tab_:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+label.tab_:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+
+label.tab_[icon*='account']:before {
+  content: "\f007";
+}
+
+label.tab_[icon*='detail']:before {
+  content: "\f044";
+}
+
+label.tab_[icon*='link']:before {
+  content: "\f08e";
+}
+
+input.tab_button:checked + label.tab_ {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid orange;
+  border-bottom: 1px solid #fff;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+  label.tab_ {
+    font-size: 0;
+  }
+
+  label.tab_:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  label.tab_ {
+    padding: 15px;
+  }
+}
